@@ -26,8 +26,8 @@ var whiskers ={
 }
 
 
-function petCat() {
-  petCount.petCount++
+function petCat(targetCat) {
+  targetCat.petCount++
   petCount.innerHTML = targetCat.petCount
   if (targetCat.petCount > 5) {
     catStatus.innerHTML = targetCat.grumpystatus
@@ -44,7 +44,7 @@ function petCat() {
 
 }
 function kittyBack(targetCat) {
-  petCount.petCount = 0
+  targetCat.petCount = 0
   petCount.innerHTML =targetCat.petCount
   catButton.disable = false
   catStatus.innerHMTL =targetCat.happyStatus
