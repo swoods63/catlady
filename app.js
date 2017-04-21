@@ -17,7 +17,44 @@ var cats = [{
   feralStatus: "bark",
   goneStatus: "Whiskers left the room",
   petCount: 0
-}]
+}, {
+  id: 2,
+  name: "Fat Cat",
+  imgUrl: "https://unsplash.it/200/200",
+  happyStatus: "meow2?",
+  grumpystatus: "Grumpy2",
+  feralStatus: "mad2",
+  goneStatus: "Fat Cat left the room",
+  petCount: 0
+}, {
+  id: 3,
+  name: "Tabby",
+  imgUrl: "https://unsplash.it/200/200",
+  happyStatus: "meow3 ?",
+  grumpystatus: "Grumpy3",
+  feralStatus: "mad3",
+  goneStatus: "Tabby left the room",
+  petCount: 0
+}, {
+  id: 4,
+  name: "Jack",
+  imgUrl: "https://unsplash.it/200/200",
+  happyStatus: "meow4?",
+  grumpystatus: "Grumpy4",
+  feralStatus: "mad4",
+  goneStatus: "Jack left the room",
+  petCount: 0
+}, {
+  id: 5,
+  name: "Felis",
+  imgUrl: "https://unsplash.it/200/200",
+  happyStatus: "meow5?",
+  grumpystatus: "Grumpy5",
+  feralStatus: "mad5",
+  goneStatus: "Felis left the room",
+  petCount: 0
+}
+]
 
 
 function petCat(catId) {
@@ -25,10 +62,7 @@ function petCat(catId) {
   var catStatus = document.getElementById("catStatus" + catId)
   var catButton = document.getElementById("catButton" + catId)
   var catPic = document.getElementById("catPic" + catId)
-
   var targetCat = getCatById(catId)
-
-
 
 
   targetCat.petCount++
@@ -52,7 +86,6 @@ function getCatById(catId) {
 
   for (var i = 0; i < cats.length; i++) {
     var cat = cats[i];
-
     if (cat.id == catId) {
       return cat
     }
@@ -90,6 +123,6 @@ function drawCats(listOfCats) {
   </div>`
 
   }
-  document.getElementById("catList").innerHTML = template  
+  document.getElementById("catList").innerHTML = template
 }
 drawCats(cats)
